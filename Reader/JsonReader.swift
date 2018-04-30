@@ -22,7 +22,7 @@ class JsonReader {
             } catch let error {
                 print("error parsing \(error)")
             }
-        }
+        } 
         
         return json
     }

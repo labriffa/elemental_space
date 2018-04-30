@@ -9,5 +9,7 @@
 import UIKit
 
 class EncyclopediaViewCell: UITableViewCell {
-    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var color: UIImageView!
+    @IBOutlet weak var symbol: UILabel!
 }

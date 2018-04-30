@@ -6,7 +6,10 @@
 //  Copyright © 2018 Lewis Briffa. All rights reserved.
 //
 
+import UIKit
+
 protocol ElementFamily {
+    var color: UIColor { get set }
     var hitPoints: Int { get set }
     var scorePoints: Int { get set }
 }
@@ -14,17 +17,20 @@ protocol ElementFamily {
 /**
 *    Family Types
 **/
-struct AlkaliFamily : ElementFamily, Decodable {
+struct AlkaliFamily : ElementFamily {
+    var color: UIColor = UIColor(red: 255/255, green: 30/255, blue: 128/255, alpha: 1)
     var hitPoints: Int = FamilyHitPoints.ALKALI_BASE_HIT_POINTS
     var scorePoints: Int = FamilyScores.ALKALI_BASE_HIT_POINTS
 }
 
-struct TransitionMetalFamily : ElementFamily, Decodable {
+struct TransitionMetalFamily : ElementFamily  {
+    var color: UIColor = UIColor(red: 12/255, green: 254/255, blue: 230/255, alpha: 1)
     var hitPoints: Int = FamilyHitPoints.TRANSITION_METAL_BASE_HIT_POINTS
     var scorePoints: Int = FamilyScores.TRANSITION_METAL_BASE_HIT_POINTS
 }
 
-struct HalogenFamily : ElementFamily, Decodable {
+struct HalogenFamily : ElementFamily {
+    var color: UIColor = UIColor(red: 254/255, green: 213/255, blue: 140/255, alpha: 1)
     var hitPoints: Int = FamilyHitPoints.HALOGEN_BASE_HIT_POINTS
     var scorePoints: Int = FamilyScores.HALOGEN_BASE_HIT_POINTS
 }

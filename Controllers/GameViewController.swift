@@ -11,18 +11,25 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    var gameScene:GameScene!
 
+    @IBAction func endGame(_ sender: Any) {
+        gameScene?.endGame()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
+            if let gameScene = GameScene(fileNamed: "GameScene") {
+                self.gameScene = gameScene
                 // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
+                gameScene.scaleMode = .aspectFill
+                            
                 // Present the scene
-                view.presentScene(scene)
+                view.presentScene(gameScene)
             }
             
             view.ignoresSiblingOrder = true
@@ -31,6 +38,15 @@ class GameViewController: UIViewController {
             view.showsNodeCount = true
 //            view.showsPhysics = true
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
     }
 
     override var shouldAutorotate: Bool {

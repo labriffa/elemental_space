@@ -6,14 +6,20 @@
 //  Copyright © 2018 Lewis Briffa. All rights reserved.
 //
 
-class Element {
+import UIKit
+
+struct Element {
     public let symbol: String
     public let name: String
+    public let color: UIColor
+    public let summary: String
     public let family: ElementFamily
     
-    init(symbol: String, name: String, family: ElementFamily) {
+    init(symbol: String, name: String, color: UIColor, summary: String, family: ElementFamily) {
         self.symbol = symbol
         self.name = name
+        self.color = color
+        self.summary = summary
         self.family = family
     }
 }
