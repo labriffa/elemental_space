@@ -23,7 +23,6 @@ class ElementOverviewViewController: UIViewController {
         super.viewDidLoad()
         if let el = element {
             self.color.backgroundColor = el.color
-            print(el.summary)
             self.summaryTextField.text = el.summary
             self.symbolLabel.text = el.symbol
         }
