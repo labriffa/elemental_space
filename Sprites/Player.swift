@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class PlayerSprite: SKSpriteNode, GameSprite {
+class Player: SKSpriteNode, GameSprite {
     var initialSize: CGSize = CGSize(width: 80, height: 80)
     
     func fire(maxHeight:CGFloat) {

@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class ElementBlockSprite : SKShapeNode, GameSprite {
+class ElementBlock : SKShapeNode, GameSprite {
     var initialSize: CGSize = CGSize(width: 80, height: 80)
     var element: Element!
     
@@ -21,13 +21,10 @@ class ElementBlockSprite : SKShapeNode, GameSprite {
         
         self.name = "block"
         self.element = element
-        
-        self.fillColor = element.family.color
+        self.fillColor = element.color
         self.lineWidth = 4
-        
-        self.addPhysics()
-        
         let label = self.createElementLabel()
+        self.addPhysics()
         self.addChild(label)
     }
     

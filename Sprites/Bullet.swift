@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class BulletSprite : SKSpriteNode, GameSprite {
+class Bullet : SKSpriteNode, GameSprite {
     var initialSize: CGSize = CGSize(width:5, height:20)
     
     init() {
