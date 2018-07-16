@@ -4,3 +4,5 @@ An iOS game developed for high school students studying science. Part of my thir
 section provides extra information on each chemical.
 
 ![alt text](https://res.cloudinary.com/dj7k0lade/image/upload/v1531764525/github/meteor-score.png)
+![alt text](https://res.cloudinary.com/dj7k0lade/image/upload/v1531764706/github/encyclopedia-tablet.png)
+
